@@ -7,7 +7,7 @@ const path = require('path');
 app.use(express.static(__dirname + '/dist/tool-frontend'));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/toolfrontend/index.html'));
+    res.sendFile(path.join(__dirname, 'dist/tool-frontend/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
