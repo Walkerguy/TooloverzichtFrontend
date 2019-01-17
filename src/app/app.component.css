@@ -1,17 +1,12 @@
 #content {
     width: 75%;
     margin: 0 auto;
-    background-color: black;
     top:0;
     padding:0;
     margin-top:0;
     margin-bottom:0;
     height:100%;
     min-height:100vh;
-}
-
-#spacer{
-  width:5px;
 }
 
 #header-img{
@@ -76,11 +71,11 @@
 }
 
 .image {
-  transition: border .1s; /* Animation */
-
+  transition: border .2s; /* Animation */
+  border: 3px solid whitesmoke;
 }
 
 .image:hover {
   cursor: pointer;
-  border:1px solid white;
+  border:3px solid #ed1b24;
 }
