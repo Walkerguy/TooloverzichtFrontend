@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductService } from '../../services/product.service';
 import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Product } from '../../services/product';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,15 +11,19 @@ import { NgbModalConfig, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   title = 'toolFrontend';
 
-  // Define a users property to hold our user data
- products: Array<any>;
-
+  // Define a products property to hold our prod data
+ products: Array<Product>;
+ productje:Product;
  // Create an instance of the DataService through dependency injection
  constructor(private _productService: ProductService) {
 
-   // Access the Data Service's getUsers() method we defined
+   // Access the Data Service's getproducts() method we defined
    this._productService.getProducts()
        .subscribe(res => this.products = res);
  }
 
+photoclicked(a:any){
+  console.log(a);
+  this.productje = a;
+}
 }

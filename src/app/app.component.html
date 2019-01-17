@@ -1,13 +1,22 @@
-<div class="modal">
-  <div class="modal-dialog">
+<!-- Modal  -->
+
+<div class="modal fade" id="demoModal">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-body">
-          <p>this is the body do you like it?</p>
+      <div class="modal-header">
+        <h2 class="modal-title">{{productje?.name}}</h2>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
       </div>
-      <div class="modal-footer"><button class="btn">Confirm</button></div>
+      <div class="modal-body">
+        <img style="max-width:99%;" [src]="productje?.imageurl"/>
+        <p>{{productje?.description}}</p><br/>
+        <p><b>{{productje?.categorie}}</b></p>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- website content -->
 
 <div id="content">
  <div id="spacer"></div>
@@ -15,10 +24,19 @@
  <!-- <app-card></app-card> -->
  <section id="photos" style="color:white">
    <img  *ngFor="let product of products"
+   class="image"
    title="{{product.name}}"
    [src]="product.imageurl"
    onerror="this.style.display='none'"
-   (click)="ClickButton()"
+   data-toggle="modal"
+   data-target="#demoModal"
+   (click)="photoclicked(product)"
     />
 </section>
 </div>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
