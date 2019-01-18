@@ -7,3 +7,7 @@ body{
   margin: 0;
   font-family:"Segoe UI", "Lucida Grande", sans-serif;
 }
+
+.modal-content{
+  color: black;
+}
