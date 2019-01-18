@@ -11,3 +11,7 @@ body{
 .modal-content{
   color: black;
 }
+
+#header{
+  padding-top:10px;
+}
