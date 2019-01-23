@@ -72,7 +72,7 @@
 
 .image {
   transition: border .2s; /* Animation */
-  border: 3px solid black;
+  border: 3px solid #080808;
 }
 
 .image:hover {
